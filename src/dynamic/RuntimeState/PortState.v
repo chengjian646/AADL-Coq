@@ -2,7 +2,8 @@ From Coq Require Import List Arith ListSet String Lia Logic.FunctionalExtensiona
 From compcert.common Require Import Values.
 From compcert.lib Require Import Maps.
 
-From aadlcoq.src Require Import Model Queue.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import Queue.
 
 (*引入类型PortState——从PortId到Queue的映射，
   以实现每个队列的关联*)

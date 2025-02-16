@@ -1,0 +1,11 @@
+*.config
+.CoqMakefile.d
+CoqMakefile
+CoqMakefile.conf
+/*.ml
+/*.mli
+*.glob
+*.vo
+*.vok
+*.vos
+*.aux

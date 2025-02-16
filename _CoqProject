@@ -1,0 +1,7 @@
+INSTALLDEFAULTROOT = src 
+ -R src/static aadlcoq.src.static
+ -R src/dynamic/RuntimeState aadlcoq.src.dynamic.RuntimeState
+ -R src/dynamic/scheduling aadlcoq.src.dynamic.scheduling
+ -R src/dynamic/semantics aadlcoq.src.dynamic.semantics
+
+-R /home/chengjian/CompCert compcert

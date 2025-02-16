@@ -4,8 +4,8 @@ From compcert.lib Require Import Maps.
 Require Import Coq.Sets.Ensembles.
 
 Import ListNotations.
-
-From aadlcoq.src Require Import Model ThreadState PortState.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import ThreadState PortState.
 
 Inductive Phase := Initializing | Computing.
 

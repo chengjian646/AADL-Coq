@@ -1,7 +1,7 @@
 From compcert.common Require Import Values.
 From compcert.lib Require Import Maps.
 
-From aadlcoq.src Require Import Model.
+From aadlcoq.src.static Require Import Model.
 (*
 Variable A : Type. *)
 

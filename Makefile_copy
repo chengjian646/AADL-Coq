@@ -9,21 +9,22 @@ MV := mv
 
 COQEXTRAFLAGS := COQEXTRAFLAGS = '-w all,-extraction,-disj-pattern-notation'
 
-# 自动获取所有 Coq 文件
-SRC = $(shell find src/static -name "*.v")
-
-COQSRC = $(SRC)
+DIRS := src
 
 all:
 	@echo $@
 	@$(MAKE) src
+   
+SRC= Model.v VarState.v Queue.v PortState.v ThreadState.v SystemState.v DispatchLogic.v App.v Component.v properties.v
+
+COQSRC = $(addprefix src/, $(SRC))
 
 src:
 	@echo $@
-	$(COQMAKEFILE) -f _CoqProject $(COQSRC) $(COQEXTRAFLAGS) -o CoqMakefile
+	$(COQMAKEFILE) -f _CoqProject $(COQSRC) $(COQEXTRAFLAGS)  -o CoqMakefile
 	make -f CoqMakefile
 
-clean:
+clean :
 	@echo $@
 	make -f CoqMakefile clean
 	find . -name "*\.vo" -exec rm {} \;
@@ -38,4 +39,3 @@ clean:
 .SECONDARY:
 
 .PHONY: all src clean
-

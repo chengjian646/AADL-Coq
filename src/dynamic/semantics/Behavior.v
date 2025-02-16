@@ -3,8 +3,11 @@ From compcert.common Require Import Values.
 From compcert.lib Require Import Maps.
 
 Import ListNotations.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import ThreadState PortState VarState SystemState Queue.
+From aadlcoq.src.dynamic.semantics Require Import App.
+From aadlcoq.src.dynamic.scheduling Require Import DispatchLogic.
 
-From aadlcoq.src Require Import Model App ThreadState SystemState DispatchLogic VarState PortState Queue.
 
 (*-------------------Initialize Entry Point------------------------*)
 (*本节中的规则反映了如何通过执行线程入口点的应用程序逻辑来转换线程的状态。 每个入口点的状态转换由

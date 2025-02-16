@@ -4,7 +4,9 @@ From compcert.lib Require Import Maps.
 
 Import ListNotations.
 
-From aadlcoq.src Require Import Model ThreadState PortState.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import ThreadState PortState.
+
 
 Definition comp0 := mkCompId 0.
 Definition portid0 := mkPortId 0.

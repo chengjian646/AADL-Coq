@@ -4,7 +4,8 @@ From compcert.lib Require Import Maps.
 
 Import ListNotations.
 
-From aadlcoq.src Require Import Model VarState PortState.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import VarState PortState.
 
 Inductive DispatchStatus :=
   | NotEnabled  (* 线程未启用 *)

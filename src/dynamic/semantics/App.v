@@ -3,8 +3,8 @@ From compcert.common Require Import Values.
 From compcert.lib Require Import Maps.
 
 Import ListNotations.
-
-From aadlcoq.src Require Import Model ThreadState VarState PortState Queue.
+From aadlcoq.src.static Require Import Model.
+From aadlcoq.src.dynamic.RuntimeState Require Import ThreadState PortState VarState Queue.
 
 Record App :={
   appInit    : VarState -> PortState -> bool;
